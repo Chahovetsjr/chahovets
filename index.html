@@ -6,10 +6,13 @@
   <title>Timur Chahovets</title>
   <style>
     body {
-      background-color: #ffe5d0;
-      font-family: Arial, sans-serif;
-      text-align: left;
+      margin: 0;
       padding: 20px;
+    }
+    img.logo {
+      height: 40px;
+      display: block;
+      margin-bottom: 30px;
     }
     img.photo {
       display: block;
@@ -17,48 +20,68 @@
       height: 150px;
       object-fit: cover;
       object-position: center 55%;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
       margin: 20px 0;
     }
-    ul {
-      padding-left: 20px;
+    th, td {
+      border: 1px solid black;
+      padding: 2px 4px;
+      text-align: left;
     }
-    img.icon {
-      width: 20px;
+    th {
+      background-color: #e97f33;
+      text-align: center;
+    }
+    td.cas {
+      font-weight: bold;
+    }
+    td.zvyraznene {
+      background-color: #fff2cc;
+    }
+    td.stred {
       vertical-align: middle;
-    }
-    a.btn {
-      display: inline-block;
-      background-color: white;
-      color: black;
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 8px;
-      margin: 5px;
     }
   </style>
 </head>
 <body>
+  <img class="logo" src="logo.png" alt="Technická univerzita v Košiciach">
+
   <h1>Timur Chahovets</h1>
+  <p>Študent komerčnej logistiky.</p>
 
-  <p>Ahoj, som študent logistiky a zaujímam sa o riadenie logistických procesov.</p>
+  <img class="photo" src="photo.jpg" alt="Timur Chahovets">
 
-  <img class="photo" src="photo.jpg">
+  <h2>Môj rozvrh hodín</h2>
 
-  <h2>Moje zručnosti</h2>
-  <ul>
-    <li>Športové skúsenosti a základy trénerstva</li>
-    <li>Organizačné a plánovacie schopnosti</li>
-    <li>Logické myslenie a riešenie problémov</li>
-  </ul>
+  <table>
+    <tr>
+      <th>Čas / Deň</th>
+      <th>Pondelok</th>
+      <th>Utorok</th>
+      <th>Streda</th>
+    </tr>
+    <tr>
+      <td class="cas">8:00 - 9:30</td>
+      <td>Teória logistiky</td>
+      <td>Simulačné systémy</td>
+      <td class="stred" rowspan="2">Tvorba webových stránok</td>
+    </tr>
+    <tr>
+      <td class="cas">9:45 - 11:15</td>
+      <td>Algoritmizácia</td>
+      <td>Matematika</td>
+    </tr>
+    <tr>
+      <td class="cas">13:30 - 15:00</td>
+      <td class="zvyraznene">Technológie internetu</td>
+      <td>Ekonomika</td>
+      <td>Telesná výchova</td>
+    </tr>
+  </table>
 
-  <h2>Kontakt a sociálne siete</h2>
-  <p>
-    <a class="btn" href="https://www.instagram.com/chagovets_jr/?hl=ru" target="_blank" rel="noopener">
-      <img class="icon" src="https://cdn.simpleicons.org/instagram"> Instagram
-    </a>
-    <a class="btn" href="https://www.tiktok.com/@chagovetsjr" target="_blank" rel="noopener">
-      <img class="icon" src="https://cdn.simpleicons.org/tiktok"> TikTok
-    </a>
-  </p>
+  <p><a href="https://maisportal.tuke.sk/portal/rozvrhy.mais" target="_blank" rel="noopener">otvoriť v MAISe</a></p>
 </body>
 </html>
