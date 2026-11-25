@@ -1,87 +1,133 @@
+
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Timur Chahovets</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 20px;
-    }
-    img.logo {
-      height: 40px;
-      display: block;
-      margin-bottom: 30px;
-    }
-    img.photo {
-      display: block;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      object-position: center 55%;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 2px 4px;
-      text-align: left;
-    }
-    th {
-      background-color: #e97f33;
-      text-align: center;
-    }
-    td.cas {
-      font-weight: bold;
-    }
-    td.zvyraznene {
-      background-color: #fff2cc;
-    }
-    td.stred {
-      vertical-align: middle;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITE FITNESS | Premium Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <img class="logo" src="logo.png" alt="Technická univerzita v Košiciach">
 
-  <h1>Timur Chahovets</h1>
-  <p>Študent komerčnej logistiky.</p>
+<header>
+    <div class="logo">ELITE<span>FITNESS</span></div>
 
-  <img class="photo" src="photo.jpg" alt="Timur Chahovets">
+    <nav>
+        <a href="#home">Domov</a>
+        <a href="#about">O nás</a>
+        <a href="#services">Služby</a>
+        <a href="#pricing">Členstvo</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
 
-  <h2>Môj rozvrh hodín</h2>
+    <a href="#pricing" class="nav-btn">STAŇ SA ČLENOM</a>
+</header>
 
-  <table>
-    <tr>
-      <th>Čas / Deň</th>
-      <th>Pondelok</th>
-      <th>Utorok</th>
-      <th>Streda</th>
-    </tr>
-    <tr>
-      <td class="cas">8:00 - 9:30</td>
-      <td>Teória logistiky</td>
-      <td>Simulačné systémy</td>
-      <td class="stred" rowspan="2">Tvorba webových stránok</td>
-    </tr>
-    <tr>
-      <td class="cas">9:45 - 11:15</td>
-      <td>Algoritmizácia</td>
-      <td>Matematika</td>
-    </tr>
-    <tr>
-      <td class="cas">13:30 - 15:00</td>
-      <td class="zvyraznene">Technológie internetu</td>
-      <td>Ekonomika</td>
-      <td>Telesná výchova</td>
-    </tr>
-  </table>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="gold-text">PREMIUM FITNESS EXPERIENCE</p>
+        <h1>BUILD YOUR<br><span>STRONGER</span> SELF.</h1>
+        <p class="hero-description">
+            Tvoje telo. Tvoja sila. Tvoje pravidlá.
+            Začni svoju cestu k lepšej verzii seba už dnes.
+        </p>
+        <a href="#pricing" class="main-btn">OBJAV NAŠE ČLENSTVO →</a>
+    </div>
+</section>
 
-  <p><a href="https://maisportal.tuke.sk/portal/rozvrhy.mais" target="_blank" rel="noopener">otvoriť v MAISe</a></p>
+<section class="about section" id="about">
+    <div class="about-image"></div>
+    <div class="about-content">
+        <p class="gold-text">O NAŠOM FITNESS CENTRE</p>
+        <h2>MORE THAN<br><span>JUST A GYM.</span></h2>
+        <p>
+            ELITE FITNESS je miesto pre ľudí, ktorí chcú dosiahnuť
+            svoje ciele a posúvať svoje hranice. Ponúkame moderné
+            vybavenie, profesionálnych trénerov a motivujúce prostredie.
+        </p>
+        <div class="stats">
+            <div><h3>1500+</h3><p>ČLENOV</p></div>
+            <div><h3>15+</h3><p>TRÉNEROV</p></div>
+            <div><h3>24/7</h3><p>PRÍSTUP</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="services section" id="services">
+    <p class="gold-text">ČO PONÚKAME</p>
+    <h2>OUR <span>SERVICES</span></h2>
+
+    <div class="service-grid">
+        <div class="service-card">
+            <div class="service-number">01</div>
+            <h3>STRENGTH TRAINING</h3>
+            <p>Buduj svaly a silu s profesionálnym vybavením.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-number">02</div>
+            <h3>PERSONAL TRAINING</h3>
+            <p>Individuálny prístup a tréningový plán podľa tvojich cieľov.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-number">03</div>
+            <h3>CARDIO ZONE</h3>
+            <p>Zlepši svoju kondíciu a vytrvalosť.</p>
+        </div>
+    </div>
+</section>
+
+<section class="pricing section" id="pricing">
+    <p class="gold-text">VYBER SI SVOJ PLÁN</p>
+    <h2>MEMBERSHIP <span>PLANS</span></h2>
+
+    <div class="pricing-grid">
+        <div class="price-card">
+            <h3>BASIC</h3>
+            <h2>29€<small>/ mesiac</small></h2>
+            <p>✓ Prístup do fitness centra</p>
+            <p>✓ Moderné vybavenie</p>
+            <p>✓ Šatne a sprchy</p>
+            <a href="#contact">VYBRAŤ BALÍK</a>
+        </div>
+
+        <div class="price-card featured">
+            <div class="popular">MOST POPULAR</div>
+            <h3>PREMIUM</h3>
+            <h2>49€<small>/ mesiac</small></h2>
+            <p>✓ Všetky výhody BASIC</p>
+            <p>✓ Skupinové tréningy</p>
+            <p>✓ Sauna a wellness</p>
+            <p>✓ Neobmedzený vstup</p>
+            <a href="#contact">VYBRAŤ BALÍK</a>
+        </div>
+
+        <div class="price-card">
+            <h3>VIP</h3>
+            <h2>79€<small>/ mesiac</small></h2>
+            <p>✓ Všetky výhody PREMIUM</p>
+            <p>✓ Osobný tréner</p>
+            <p>✓ Individuálny plán</p>
+            <p>✓ Výživové poradenstvo</p>
+            <a href="#contact">VYBRAŤ BALÍK</a>
+        </div>
+    </div>
+</section>
+
+<section class="contact section" id="contact">
+    <p class="gold-text">ZAČNI DNES</p>
+    <h2>YOUR JOURNEY<br><span>STARTS HERE.</span></h2>
+    <p>Pridaj sa k ELITE FITNESS a začni pracovať na svojich cieľoch.</p>
+    <a href="mailto:info@elitefitness.sk" class="main-btn">KONTAKTUJ NÁS →</a>
+</section>
+
+<footer>
+    <div class="logo">ELITE<span>FITNESS</span></div>
+    <p>© 2026 ELITE FITNESS. Všetky práva vyhradené.</p>
+    <p>Instagram | Facebook</p>
+</footer>
+
 </body>
 </html>
