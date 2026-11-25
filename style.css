@@ -617,3 +617,176 @@ footer {
         height: 300px;
     }
 }
+
+
+/* =================================
+   ELITE FITNESS - PREMIUM ANIMATIONS
+================================= */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero entrance animation */
+.hero-content {
+    animation: heroEnter 1.2s ease-out both;
+}
+
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(45px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(.2,.7,.2,1);
+    transition-delay: var(--delay, 0ms);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image zoom */
+.trainer-card img,
+.about-image,
+.comparison img {
+    transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.trainer-card:hover img {
+    transform: scale(1.06);
+    filter: grayscale(0%);
+}
+
+.about-image {
+    overflow: hidden;
+}
+
+.about-image:hover {
+    background-size: 110%;
+}
+
+/* Gold glowing borders */
+.service-card,
+.price-card,
+.review-card,
+.trainer-card,
+.transformation-card {
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.service-card:hover,
+.price-card:hover,
+.review-card:hover,
+.trainer-card:hover,
+.transformation-card:hover {
+    border-color: #d6ad60;
+    box-shadow: 0 12px 35px rgba(214, 173, 96, 0.12);
+}
+
+/* Buttons shine animation */
+.main-btn,
+.nav-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-btn::before,
+.nav-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255,255,255,0.5),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.main-btn:hover::before,
+.nav-btn:hover::before {
+    left: 140%;
+}
+
+/* Navigation underline */
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #d6ad60;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Header shadow on scroll */
+header {
+    transition: box-shadow 0.4s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+/* Gold accent animation */
+.gold-text {
+    animation: goldGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes goldGlow {
+    from {
+        text-shadow: 0 0 0 rgba(214,173,96,0);
+    }
+    to {
+        text-shadow: 0 0 14px rgba(214,173,96,0.3);
+    }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal,
+    .hero-content,
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
