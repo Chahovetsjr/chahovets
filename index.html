@@ -276,6 +276,66 @@
     <p>Instagram | Facebook</p>
 </footer>
 
+/* =================================
+   ELITE FITNESS - SCROLL ANIMATIONS
+================================= */
+
+document.documentElement.classList.add("js-enabled");
+
+const animatedElements = document.querySelectorAll(`
+    .section > .gold-text,
+    .section > h2,
+    .section-description,
+    .about-image,
+    .about-content,
+    .service-card,
+    .trainer-card,
+    .transformation-card,
+    .review-card,
+    .price-card,
+    .contact > *
+`);
+
+animatedElements.forEach((element, index) => {
+    element.classList.add("reveal");
+
+    const siblings = Array.from(element.parentElement.children)
+        .filter(item => item.matches(
+            '.service-card, .trainer-card, .transformation-card, .review-card, .price-card'
+        ));
+
+    if (siblings.length > 1) {
+        element.style.setProperty(
+            "--delay",
+            `${siblings.indexOf(element) * 150}ms`
+        );
+    }
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+animatedElements.forEach(element => {
+    observer.observe(element);
+});
+
+
+/* HEADER SCROLL EFFECT */
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 50);
+}, { passive: true });
+
 </body>
 </html>
     
