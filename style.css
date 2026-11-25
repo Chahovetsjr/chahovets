@@ -790,3 +790,11 @@ header.scrolled {
         transform: none;
     }
 }
+
+.js-enabled .reveal:not(.visible) {
+    opacity: 0;
+}
+
+.js-enabled .reveal.visible {
+    opacity: 1;
+}
